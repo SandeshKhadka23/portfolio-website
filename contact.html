@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            justify-content: center;
+            height: 65px;
+            margin-top: 0px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: green;
+        }
+
+
+        /* Form Styles */
+ form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0062E6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #0051c2;
+}
+h2{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+}
+.social a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    background: none;
+    color: black;
+}
+ .social{
+    margin: 50px 0 ;
+      display: flex;
+     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+ }
+ footer {
+    padding-top: 50px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+ /* Responsive Navigation Menu */
+ .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                height: 50px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                /* background-color: #f0f0f0; */
+                top: 49px;
+                left: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: black;
+            }
+
+            .menu-toggle.active + ul {
+                display: flex;
+            }
+        }
+    </style>
+
+    </style>
+</head>
+<body>
+      <!-- this is navigation section -->
+      <nav>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li><a href="new.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="skills.html">SKILLS </a></li>
+             <li><a href="projects.html">PROJECTS </a></li> 
+             <!-- shift+alt+down  -->
+            <li><a href="participation section.html">PARTICIPATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        </nav>
+<!-- this is contact section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact/Hire Me</h2>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="fc251895-069f-4ad4-a012-2c51dac905c7">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"  placeholder="Enter Email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+ <footer>
+        <div class="container">
+            <p>&copy; 2024 Sandesh Khadka. All rights reserved.</p>
+            <div class="social">
+                <a href="https://www.facebook.com/sandesh.khadka.5099"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/sandesh946"><i class="fab fa-twitter "></i></a>
+                <a href="https://www.linkedin.com/in/sandesh-khadka-0791452a5/"><i class="fab fa-linkedin-in "></i></a>
+                <a href="https://github.com/sandeshKhadka23"><i class="fab fa-github "></i></a>
+            </div>
+        </div>
+    </footer>
+</section>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+    const aboutSection = document.getElementById('contact');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+
+        if (nav.classList.contains('active')) {
+            aboutSection.style.marginTop = `${nav.offsetHeight}px`;
+        } else {
+            aboutSection.style.marginTop = '0';
+        }
+    });
+</script> 
+</body>
+</html>

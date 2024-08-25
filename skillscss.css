@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: sans-serif;
+}
+
+body {
+    color: black;
+    background: white;
+}
+
+ /* navigation menu */
+ nav {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: center;
+    height: 90px;
+    margin-top: 0px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+
+.sub-title span {
+    color: rgb(15, 15, 118);
+}
+
+section .exactskills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Technical Skills */
+.containerq {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 30px;
+}
+
+.bar {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.bar .info {
+    margin-bottom: 5px;
+}
+
+.bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: slowText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes slowText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 80%;
+}
+
+.progress-line.javascript span {
+    width: 50%;
+}
+
+.progress-line.python span {
+    width: 30%;
+}
+
+.progress-line.c span {
+    width: 90%;
+}
+
+.progress-line.cpp span {
+    width: 80%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html span::after {
+    content: "90";
+}
+
+.progress-line.css span::after {
+    content: "80";
+}
+
+.progress-line.javascript span::after {
+    content: "50";
+}
+
+.progress-line.python span::after {
+    content: "30";
+}
+
+.progress-line.c span::after {
+    content: "90";
+}
+
+.progress-line.cpp span::after {
+    content: "80";
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: black;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Professional Skills */
+.containerx {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.containerx .heading1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+}
+
+.radial-bar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.radial-bar svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.radial-bar .progress-bar {
+    fill: none;
+    stroke: #333;
+    stroke-width: 10;
+}
+
+.radial-bar .path {
+    fill: none;
+    stroke: green;
+    stroke-width: 10;
+    stroke-dasharray: 502; /* Circumference of the circle */
+    stroke-dashoffset: 502;
+    animation: animateRadial 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: center;
+}
+
+@keyframes animateRadial {
+    100% {
+        stroke-dashoffset: var(--offset);
+    }
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.text {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+/* Usage example with custom properties */
+.radial-bar[data-percentage="90"] {
+    --offset: calc(502 - (502 * 90 / 100));
+}
+
+.radial-bar[data-percentage="80"] {
+    --offset: calc(502 - (502 * 80 / 100));
+}
+
+.radial-bar[data-percentage="70"] {
+    --offset: calc(502 - (502 * 70 / 100));
+}
+
+.radial-bar[data-percentage="60"] {
+    --offset: calc(502 - (502 * 60 / 100));
+}
+
+.radial-bar[data-percentage="50"] {
+    --offset: calc(502 - (502 * 50 / 100));
+}
+
+/* Responsive Navigation Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    nav  {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    nav ul  {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 49px;
+        left: 0;
+    }
+
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+
+    .menu-toggle {
+        display: block;
+        color: black;
+    }
+
+    .menu-toggle.active + ul {
+        display: flex;
+    }
+
+    .containerq,
+    .containerx {
+        width: 100%;
+        padding: 0 10px;
+        margin-left: 0;
+    }
+
+    .radial-bar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .percentage {
+        font-size: 18px;
+    }
+    
+}
+

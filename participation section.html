@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation Section</title>
+    <link rel="stylesheet" href="participation.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .heading h2 {
+            font-size: 2em;
+            color:rgb(220, 24, 24);
+            font-family: sans-serif;
+        }
+
+        .participation-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .participation {
+            display: flex;
+            align-items: center;
+            width: 70%;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .content h3 {
+            margin: 0 0 10px;
+        }
+
+        .content p {
+            margin: 0;
+        }
+
+        .images {
+            flex: 1;
+            text-align: right;
+            position: relative;
+            padding-top: 0px;
+        }
+
+        .images img {
+            width: 140px;
+            padding-left: 100px;
+            height: 130px;
+            display: none;
+        }
+
+        .images img.active {
+            display: block;
+        }
+        .images img:hover {
+            transform:scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav>
+        
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li><a href="new.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="participation section.html">PARTICIPATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+<!-- <section class="participation"> -->
+    <section id="partication">
+    <div class="heading">
+       <h2>PARTICIPATIONS</h2>
+    </div>
+
+    <div class="participation-section">
+        <!-- Participation Item -->
+        <div class="participation">
+            <div class="content">
+                <h3>Hardware Fellowship for Locus 2025</h3>
+                <p>"Completed an eight-day Hardware Fellowship for LOCUS 2025, organized by the Robotics Club at IOE
+                    Pulchowk Campus. Explored topics like basic electronics, Arduino microcontrollers, sensors, motors,
+                    and PCB designing. The fellowship culminated in building an Autonomous Wall-Avoiding Bot,
+                    integrating sensors, motors, and Arduino coding. This experience significantly expanded my knowledge
+                    in electronics, coding, and practical applications."</p>
+            </div>
+            <div class="images">
+                <img src="aibotcar.jpeg" alt="Image 1" class="active">
+                <img src="hardwarecertificate.jpeg" alt="Image 2">
+                <img src="hardwareworkshop.jpeg" alt="Image 3">
+            </div>
+        </div>
+        <div class="participation">
+            <div class="content">
+                <h3>First HACKATHON</h3>
+                <p>"Participated in IS HACKATHON 2024, a 36-hour innovation marathon organized by the Information System
+                    Club at KUSOM. Our team, SAAAS, worked on the theme of unemployment. The event, held from June
+                    14-16, 2024, at KUSOM, Balkumari, was an incredible experience. We learned how to solve societal
+                    problems with unique solutions, saw outstanding presentations, and had excellent team coordination.
+                    It was a phenomenal opportunity to grow our network and build a project together."</p>
+            </div>
+            <div class="images">
+                <img src="ishackathon.jpeg" alt="Image 1" class="active">
+                <img src="hackathongroup.jpeg" alt="Image 2">
+                <img src="hackathoncertificate.jpeg" alt="Image 3">
+            </div>
+        </div>
+        <div class="participation">
+            <div class="content">
+                <h3>One-day Python Workshop</h3>
+                <p>"Participated in a one-day Python workshop organized by the Nepal Open Source Klub (NOSK) in
+                    sponsorship with Programiz. Learned the basics of Python, which fostered my interest in diving
+                    deeper into the language."</p>
+            </div>
+            <div class="images">
+                <img src="pythoncertificate.jpeg" alt="Image 1" class="active">
+                <img src="pythonworkshop1.jpeg" alt="Image 2">
+                <img src="pythonworkshop2.jpeg" alt="Image 3">
+            </div>
+        </div>
+        <div class="participation">
+            <div class="content">
+                <h3>Three day Linux workshop</h3>
+                <p>"Attended a three-day workshop organized by the Nepal Open Source Community (NOSK), where I learned
+                    the basics of Linux, various Linux commands, downloaded Ubuntu, and performed tasks using Ubuntu in
+                    VirtualBox. This experience fueled my passion for furthering my knowledge."</p>
+            </div>
+            <div class="images">
+                <img src="linux1.jpeg" alt="Image 1" class="active">
+                <img src="linux2.png" alt="Image 2">
+                <img src="linux3.jpeg" alt="Image 3">
+                <img src="linux4.jpeg" alt="Image 4">
+            </div>
+        </div>
+    </div>
+    </section>
+<!-- </section> -->
+
+    <script>
+        // JavaScript for sliding images
+        document.querySelectorAll('.images').forEach(images => {
+            let currentIndex = 0;
+            const imgs = images.querySelectorAll('img');
+            setInterval(() => {
+                imgs[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % imgs.length;
+                imgs[currentIndex].classList.add('active');
+            }, 3000); // Change image every 3 seconds
+        });
+    </script>
+      <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        const aboutSection = document.getElementById('partication');
+    
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                aboutSection.style.marginTop = `${nav.offsetHeight}px`;
+            } else {
+                aboutSection.style.marginTop = '0';
+            }
+        });
+    </script> 
+</body>
+
+</html>

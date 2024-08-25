@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- This is home section -->
+    <div class="nav">
+        <nav>
+            <img src="logo.png" alt="" class="logo">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i> <!-- Font Awesome hamburger icon -->
+            </div>
+            <ul class="nav-list">
+                <li><a href="new.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="participation section.html">PARTICIPATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="mobilephoto"><img src="merophoto.png" alt="" class="boymob"></div>
+        <hr>
+        <div class="details">
+            <h1>I'm Sandesh <span class="surname">Khadka</span></h1>
+            <p>Welcome to my personal Portfolio Website.</p>
+            <br><br>
+            <h3> <span class="animated-text"></span></h3>
+            <br>
+            <a href="">DOWNLOAD CV</a>
+            <div class="social">
+                <a href="https://www.facebook.com/sandesh.khadka.5099"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/sandesh946"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/sandesh-khadka-0791452a5/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/sandeshKhadka23"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="images">
+            <img src="shapes.png" class="shape" alt="">
+            <img src="merophoto.png" alt="" class="boy">
+        </div>
+    </div>
+
+    <!-- JS code for animated text -->
+    <script>
+        const phrases = ["web developer", "AI enthusiast", "ML enthusiast", "Computer engineering student"];
+        let currentPhraseIndex = 0;
+        const animatedTextElement = document.querySelector('.animated-text');
+        
+        function updateText() {
+            animatedTextElement.textContent = phrases[currentPhraseIndex];
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        }
+        
+        // Initial text update
+        updateText();
+        
+        // Update the text every 3 seconds to sync with the typing animation
+        setInterval(updateText, 3000);
+
+        // Toggle navigation menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            // Toggle the 'active' class on the navigation list
+            navList.classList.toggle('active');
+
+            // Change the button's appearance based on the state
+            if (navList.classList.contains('active')) {
+                menuToggle.textContent = '✖'; // Change to an 'X' when active
+                navList.style.display = 'flex'; // Show the menu
+            } else {
+                menuToggle.textContent = '☰'; // Change back to the hamburger icon
+                navList.style.display = 'none'; // Hide the menu
+            }
+        });
+    </script>
+</body>
+</html>

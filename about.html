@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            justify-content: center;
+            height: 90px;
+            margin-top: 0px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: green;
+        }
+
+        .container1 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container1 h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-content img.profile-photo {
+            border-radius: 0%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container1:hover {
+            transform: scale(1.1);
+        }
+
+        .about-content p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+            max-width: 600px;
+        }
+
+        @media (min-width: 600px) {
+            .about-content {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .about-content img.profile-photo {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .about-content p {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Responsive Navigation Menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                height: 50px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                background-color: #f0f0f0;
+                top: 49px;
+                left: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: black;
+            }
+
+            .menu-toggle.active + ul {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li><a href="new.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="participation section.html">PARTICIPATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container1">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="merophoto.jpeg" alt="Sandesh Khadka" class="profile-photo">
+                <p>Hello! I'm Sandesh Khadka, a computer engineering student in my second semester with a strong passion for programming. Currently, I'm focusing on front-end web development using HTML, CSS, and JavaScript, aiming to create user-friendly websites.
+
+                    I'm also interested in Machine Learning (ML), Artificial Intelligence (AI), and Data Science, and I'm excited about their potential to transform industries through data-driven insights. I look forward to expanding my knowledge and contributing to innovative projects in the tech community.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        const aboutSection = document.getElementById('about');
+    
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                aboutSection.style.marginTop = `${nav.offsetHeight}px`;
+            } else {
+                aboutSection.style.marginTop = '0';
+            }
+        });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+    <!-- this is navigation section -->
+    <nav>
+        
+        <div class="menu-toggle">☰</div>
+    <ul>
+        <li><a href="new.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="skills.html">SKILLS </a></li>
+         <li><a href="projects.html">PROJECTS </a></li> 
+         <!-- shift+alt+down  -->
+        <li><a href="participation section.html">PARTICIPATION</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    </nav>
+    <!-- projects section -->
+    <section class="portfolio" id="portfolio">
+        <h1>Latest <span>Projects</span></h1>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="calculator.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>CALCULATOR using C </h4>
+                    <p>calculator with simple calculations,matrix operations,converter,quadratic equations,calculating power of a number,SI,etc</p>
+                    <a href="https://github.com/SandeshKhadka23/c-projects/tree/master"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="bankmanagementsystem.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Bank Management using C</h4>
+                    <p>Includes functionalities like: 
+                        a)adding new information of new saver in bank(personal information, bank-id, pin etc)<br>
+                        b) deposit money<br>
+                        c) withdraw money <br>
+                        d)check bank balance etc.</p>
+                    <a href="https://github.com/SandeshKhadka23/c-projects/tree/master"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="numberguess.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>NUMBER GUESS </h4>
+                    <p>This is game in which computer sets one number between 1 to 100 and the user have to guess the number.<br> It shows  very high if the number entered is low and very low if the number entered is high.</p>
+                    <a href="https://github.com/SandeshKhadka23/c-projects/tree/master"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="Screenshot 2024-07-30 232708.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio Website</h4>
+                    <p>I built this portfolio website.Please have a look!</p>
+                    <a href="https://github.com/SandeshKhadka23/portfolio-website"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="portfolio-navigation">
+            <div class="nav-circle left"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="nav-circle right"><i class="fa-solid fa-arrow-right"></i></div>
+        </div> -->
+    </section>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        const aboutSection = document.getElementById('portfolio');
+    
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                aboutSection.style.marginTop = `${nav.offsetHeight}px`;
+            } else {
+                aboutSection.style.marginTop = '0';
+            }
+        });
+    </script> 
+</body>
+
+</html>

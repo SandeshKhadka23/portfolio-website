@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="skillscss.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+     <!-- this is navigation section -->
+     <nav>
+        <div class="menu-toggle">☰</div>
+        <ul class="navlist">
+            <li><a href="new.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="skills.html">SKILLS </a></li>
+             <li><a href="projects.html">PROJECTS </a></li> 
+             <!-- shift+alt+down  -->
+            <li><a href="participation section.html">PARTICIPATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <section id="skillscontainer">
+    <h1 class="sub-title">
+        My <span>Skills</span>
+    </h1>
+    <section class="exactskills">
+        <!-- this is technical skills section -->
+        <div class="containerq" id="skills">
+            <h1 class="heading">Technical skills</h1>
+            <div class="Technical-bars">
+                <div class="bar">
+                    <i class="bx bxl-html5" style="color:#c95d2e"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i class="bx bxl-css3" style="color:#147bbc"></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i class="bx bxl-python" style="color:#c32ec9"></i>
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i class="bx bxl-javascript" style="color:#b0bc1e"></i>
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <img src="https://www.pngfind.com/pngs/m/280-2802676_c-language-global-or-external-variables-with-examples.png" alt="C Icon" style="width:24px;height:24px;">
+                    <div class="info">
+                        <span>C</span>
+                    </div>
+                    <div class="progress-line c">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i class="fas fa-code" style="color:blue"></i>
+                    <div class="info">
+                        <span>C++</span>
+                    </div>
+                    <div class="progress-line cpp">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- this is professional skills section -->
+        <div class="containerx">
+            <h1 class="heading1">Professional skills</h1>
+            <div class="radial-bar" data-percentage="90">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Creativity</div>
+            </div>
+            <div class="radial-bar" data-percentage="80">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar" data-percentage="70">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar" data-percentage="90">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Teamwork</div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        const aboutSection = document.getElementById('skillscontainer');
+    
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                aboutSection.style.marginTop = `${nav.offsetHeight}px`;
+            } else {
+                aboutSection.style.marginTop = '0';
+            }
+        });
+    </script> 
+</body>
+</html>

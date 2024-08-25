@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.nav {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #eff4fd;
+}
+
+.logo {
+    height: 129px;
+    padding-left: 7%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #eff4fd;
+    right: 0;
+    left: 0;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+.details {
+    margin-left: 8%;
+    padding-top: 268px;
+}
+
+.details h1 {
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+span {
+    color: orange;
+}
+
+.details p {
+    color: #555;
+    line-height: 22px;
+}
+
+.details a {
+    background: black;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape {
+    bottom: 40px;
+}
+
+.images:hover .boy {
+    left: 45%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.social a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    background: none;
+    color: black;
+}
+
+.mobilephoto {
+    display: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.animated-text {
+    color: green;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    animation: typing 3s steps(30, end) infinite; /* Only the typing effect */
+}
+
+/* Typing effect */
+@keyframes typing {
+    0% { width: 0; }
+    80% { width: 23%; } /* The text fully types out */
+    100% { width: 23%; } /* Maintain full width */
+}
+
+/* For responsive design */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    cursor: pointer;
+    height: 50px;
+    width: auto;
+}
+
+.nav-list {
+    display: flex; /* Flex display for navigation links */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Navigation responsiveness */
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+        padding-right: 20px;
+        color: black;
+    }
+    .nav-list {
+        display: none; /* Hide the menu items by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 30%; /* Full width for mobile */
+        background: #eff4fd; /* Background for mobile menu */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Below the navbar */
+        left: 65%;
+        z-index: 999; /* Keep it on top */
+    }
+
+    .nav-list.active {
+        display: flex; /* Show menu items when active */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for mobile */
+        width: 100%; /* Full width for each item */
+    }
+
+    /* Body responsiveness */
+    .details {
+        text-align: center;
+        margin-left: 5%; /* Adjust margin for smaller screens */
+        padding-top: 80px; /* Adjust padding for smaller screens */
+    }
+
+    .images {
+        display: none; /* Hide the shapes image */
+    }
+    
+    .mobilephoto {
+        display: flex;
+        height: 700px;
+        padding-top: 90px;
+        justify-content: center;
+    }
+}
