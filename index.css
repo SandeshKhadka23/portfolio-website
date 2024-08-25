@@ -181,7 +181,7 @@ body {
         background: #eff4fd; /* Background for mobile menu */
         position: absolute; /* Position it absolutely */
         top: 60px; /* Below the navbar */
-        left: 65%;
+        left: 60%;
         z-index: 999; /* Keep it on top */
     }
 
@@ -200,6 +200,9 @@ body {
         margin-left: 5%; /* Adjust margin for smaller screens */
         padding-top: 80px; /* Adjust padding for smaller screens */
     }
+    .details h1{
+        font-size: 30px;
+    }
 
     .images {
         display: none; /* Hide the shapes image */
@@ -207,8 +210,8 @@ body {
     
     .mobilephoto {
         display: flex;
-        height: 700px;
-        padding-top: 90px;
+        height: 300px;
+        padding-top: 120px;
         justify-content: center;
     }
 }
