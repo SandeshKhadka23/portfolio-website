@@ -27,7 +27,7 @@ nav {
     background-color: #eff4fd;
     right: 0;
     left: 0;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 
 nav ul {
@@ -198,7 +198,7 @@ body {
     .details {
         text-align: center;
         margin-left: 5%; /* Adjust margin for smaller screens */
-        padding-top: 80px; /* Adjust padding for smaller screens */
+        padding-top: 30px; /* Adjust padding for smaller screens */
     }
     .details h1{
         font-size: 30px;
@@ -211,7 +211,7 @@ body {
     .mobilephoto {
         display: flex;
         height: 300px;
-        padding-top: 120px;
+        padding-top: 110px;
         justify-content: center;
     }
 }
