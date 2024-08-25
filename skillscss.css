@@ -63,7 +63,7 @@ section .exactskills {
 /* Technical Skills */
 .containerq {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
     padding: 0 20px;
     margin-bottom: 40px;
@@ -210,7 +210,7 @@ section .exactskills {
 /* Professional Skills */
 .containerx {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
     padding: 0 20px;
     margin-bottom: 40px;
